@@ -3,13 +3,10 @@ using namespace std;
 
 int main()
 {
-    int m, n;
-    cout<<"enter number:"; 
-    cin>> m >> n;
-
-    int multi=m*n;
-    int output=multi/2;
-    cout<<output;
+    int M, N;
+   
+    cin>> M >> N;
+    cout<<M*N/2<<endl; 
 
 return 0;
 }
