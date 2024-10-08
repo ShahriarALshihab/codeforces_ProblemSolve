@@ -1,21 +1,24 @@
-
-#include<iostream>
-#include<cmath>
-
-using namespace std;
+#include<bits/stdc++.h>
+using namespace std; 
 
 int main()
 {
-    int n=0, sum=0;
+    string s; 
+    cin>>s; 
+    vector<int> numbers; 
 
-    for(int i=1;i<=5; i++){
-        for(int j=1;j<=5;j++){
-            cin >> n;
-            if(n==1){
-                sum= abs(i-3)+ abs(j-3);
-            }
-        }
+    for(int i=0; i<s.size(); i+=2){
+        numbers.push_back(s[i]-'0'); 
     }
-    cout<<sum<<endl;
-    return 0;
+
+    sort(numbers.begin(), numbers.end()); 
+
+    for(int i=0;i<numbers.size();i++){
+        if(i>0){
+            cout<< "+"; 
+        }
+        cout<<numbers[i]; 
+    }
+
+    return 0; 
 }
